@@ -1,7 +1,1189 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://SolidMap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ink.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="SolidMap" parent="." instance=ExtResource( 2 )]
+tile_data = PoolIntArray( 0, 0, 131076, 1, 0, 131074, 2, 0, 131074, 3, 0, 131074, 4, 0, 131074, 5, 0, 131074, 6, 0, 131074, 7, 0, 131074, 8, 0, 131074, 9, 0, 131074, 10, 0, 131074, 11, 0, 131077, 65536, 0, 196611, 65537, 1, 0, 65538, 1, 2, 65539, 1, 2, 65540, 1, 2, 65541, 1, 2, 65542, 1, 2, 65543, 1, 2, 65544, 1, 2, 65545, 1, 2, 65546, 1, 1, 65547, 0, 196612, 65548, 0, 131075, 65549, 2, 0, 65550, 2, 2, 65551, 2, 2, 65552, 2, 2, 65553, 2, 2, 65554, 2, 2, 65555, 2, 1, 65558, 2, 0, 65559, 2, 2, 65560, 2, 2, 65561, 2, 1, 131072, 0, 196611, 131073, 1, 3, 131074, 1, 4, 131075, 1, 65538, 131076, 1, 65538, 131077, 1, 5, 131078, 1, 65542, 131079, 1, 65543, 131080, 1, 65543, 131081, 1, 7, 131082, 1, 65540, 131083, 1, 2, 131084, 1, 1, 131085, 2, 3, 131086, 2, 7, 131087, 2, 4, 131088, 2, 65538, 131089, 2, 5, 131090, 2, 7, 131091, 2, 65539, 131092, 1, 0, 131093, 1, 1, 131094, 2, 3, 131095, 2, 6, 131096, 2, 7, 131097, 2, 65539, 196608, 0, 196611, 196609, 1, 3, 196610, 1, 65539, 196611, 0, 0, 196612, 0, 1, 196613, 1, 3, 196614, 1, 7, 196615, 1, 65543, 196616, 1, 7, 196617, 1, 65542, 196618, 1, 6, 196619, 1, 7, 196620, 1, 65539, 196621, 2, 3, 196622, 2, 6, 196623, 2, 65539, 196625, 2, 3, 196626, 2, 65543, 196627, 2, 65539, 196628, 1, 3, 196629, 1, 65539, 196630, 2, 3, 196631, 2, 65543, 196632, 2, 65542, 196633, 2, 65539, 262144, 0, 196611, 262145, 1, 3, 262146, 1, 65539, 262147, 0, 3, 262148, 0, 65539, 262149, 1, 3, 262150, 1, 65543, 262151, 1, 65543, 262152, 1, 6, 262153, 1, 7, 262154, 1, 65542, 262155, 1, 65542, 262156, 1, 65539, 262157, 2, 3, 262158, 2, 65542, 262159, 2, 65539, 262161, 2, 3, 262162, 2, 7, 262163, 2, 65539, 262164, 1, 3, 262165, 1, 65539, 262166, 2, 3, 262167, 2, 65543, 262168, 2, 65542, 262169, 2, 65539, 327680, 0, 196611, 327681, 1, 3, 327682, 1, 65539, 327683, 0, 65536, 327684, 0, 65537, 327685, 1, 3, 327686, 1, 7, 327687, 1, 6, 327688, 1, 7, 327689, 1, 65542, 327690, 1, 65543, 327691, 1, 65543, 327692, 1, 65539, 327693, 2, 3, 327694, 2, 65543, 327695, 2, 65539, 327697, 2, 3, 327698, 2, 6, 327699, 2, 65539, 327700, 1, 3, 327701, 1, 65539, 327702, 2, 3, 327703, 2, 6, 327704, 2, 6, 327705, 2, 65539, 393216, 0, 196611, 393217, 1, 3, 393218, 1, 65540, 393219, 1, 2, 393220, 1, 2, 393221, 1, 65541, 393222, 1, 65542, 393223, 1, 6, 393224, 1, 6, 393225, 1, 65543, 393226, 1, 4, 393227, 1, 65538, 393228, 1, 65537, 393229, 2, 3, 393230, 2, 65542, 393231, 2, 65540, 393232, 2, 2, 393233, 2, 65541, 393234, 2, 7, 393235, 2, 65539, 393236, 1, 65536, 393237, 1, 65537, 393238, 2, 3, 393239, 2, 65543, 393240, 2, 7, 393241, 2, 65539, 458752, 0, 196611, 458753, 1, 65536, 458754, 1, 65538, 458755, 1, 65538, 458756, 1, 65538, 458757, 1, 65538, 458758, 1, 65538, 458759, 1, 65538, 458760, 1, 65538, 458761, 1, 65538, 458762, 1, 65537, 458763, 0, 131076, 458764, 0, 131075, 458765, 2, 65536, 458766, 2, 65538, 458767, 2, 65538, 458768, 2, 65538, 458769, 2, 65538, 458770, 2, 65538, 458771, 2, 65537, 458774, 2, 65536, 458775, 2, 65538, 458776, 2, 65538, 458777, 2, 65537, 524288, 0, 196612, 524289, 0, 131074, 524290, 0, 131074, 524291, 0, 131074, 524292, 0, 131074, 524293, 0, 131074, 524294, 0, 131074, 524295, 0, 131074, 524296, 0, 131074, 524297, 0, 131074, 524298, 0, 131074, 524299, 0, 196613, 524311, 1, 131073, 524312, 1, 131075, 589846, 2, 0, 589847, 2, 2, 589848, 2, 2, 589849, 2, 1, 655382, 2, 65536, 655383, 2, 65538, 655384, 2, 65538, 655385, 2, 65537 )
+
 [node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 86.9908, 56.1231 )
+
+[node name="ink" parent="." instance=ExtResource( 3 )]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 32.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink11" parent="." instance=ExtResource( 3 )]
+margin_left = 16.0
+margin_top = 32.0
+margin_right = 32.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink12" parent="." instance=ExtResource( 3 )]
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 48.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink13" parent="." instance=ExtResource( 3 )]
+margin_left = 48.0
+margin_top = 32.0
+margin_right = 64.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink14" parent="." instance=ExtResource( 3 )]
+margin_left = 64.0
+margin_top = 32.0
+margin_right = 80.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink15" parent="." instance=ExtResource( 3 )]
+margin_left = 80.0
+margin_top = 32.0
+margin_right = 96.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink16" parent="." instance=ExtResource( 3 )]
+margin_left = 96.0
+margin_top = 32.0
+margin_right = 112.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink17" parent="." instance=ExtResource( 3 )]
+margin_left = 112.0
+margin_top = 32.0
+margin_right = 128.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink18" parent="." instance=ExtResource( 3 )]
+margin_left = 128.0
+margin_top = 32.0
+margin_right = 144.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink19" parent="." instance=ExtResource( 3 )]
+margin_left = 144.0
+margin_top = 32.0
+margin_right = 160.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink20" parent="." instance=ExtResource( 3 )]
+margin_left = 160.0
+margin_top = 32.0
+margin_right = 176.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink21" parent="." instance=ExtResource( 3 )]
+margin_left = 176.0
+margin_top = 32.0
+margin_right = 192.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink22" parent="." instance=ExtResource( 3 )]
+margin_left = 192.0
+margin_top = 32.0
+margin_right = 208.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink75" parent="." instance=ExtResource( 3 )]
+margin_left = 224.0
+margin_top = 16.0
+margin_right = 240.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink81" parent="." instance=ExtResource( 3 )]
+margin_left = 208.0
+margin_top = 16.0
+margin_right = 224.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink76" parent="." instance=ExtResource( 3 )]
+margin_left = 240.0
+margin_top = 16.0
+margin_right = 256.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink77" parent="." instance=ExtResource( 3 )]
+margin_left = 256.0
+margin_top = 16.0
+margin_right = 272.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink78" parent="." instance=ExtResource( 3 )]
+margin_left = 272.0
+margin_top = 16.0
+margin_right = 288.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink79" parent="." instance=ExtResource( 3 )]
+margin_left = 288.0
+margin_top = 16.0
+margin_right = 304.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink80" parent="." instance=ExtResource( 3 )]
+margin_left = 304.0
+margin_top = 16.0
+margin_right = 320.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink121" parent="." instance=ExtResource( 3 )]
+margin_left = 352.0
+margin_top = 16.0
+margin_right = 368.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink122" parent="." instance=ExtResource( 3 )]
+margin_left = 368.0
+margin_top = 16.0
+margin_right = 384.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink123" parent="." instance=ExtResource( 3 )]
+margin_left = 384.0
+margin_top = 16.0
+margin_right = 400.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink124" parent="." instance=ExtResource( 3 )]
+margin_left = 400.0
+margin_top = 16.0
+margin_right = 416.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink125" parent="." instance=ExtResource( 3 )]
+margin_left = 352.0
+margin_top = 32.0
+margin_right = 368.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink126" parent="." instance=ExtResource( 3 )]
+margin_left = 368.0
+margin_top = 32.0
+margin_right = 384.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink127" parent="." instance=ExtResource( 3 )]
+margin_left = 384.0
+margin_top = 32.0
+margin_right = 400.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink128" parent="." instance=ExtResource( 3 )]
+margin_left = 400.0
+margin_top = 32.0
+margin_right = 416.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink129" parent="." instance=ExtResource( 3 )]
+margin_left = 352.0
+margin_top = 48.0
+margin_right = 368.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink130" parent="." instance=ExtResource( 3 )]
+margin_left = 368.0
+margin_top = 48.0
+margin_right = 384.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink131" parent="." instance=ExtResource( 3 )]
+margin_left = 384.0
+margin_top = 48.0
+margin_right = 400.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink132" parent="." instance=ExtResource( 3 )]
+margin_left = 400.0
+margin_top = 48.0
+margin_right = 416.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink133" parent="." instance=ExtResource( 3 )]
+margin_left = 352.0
+margin_top = 64.0
+margin_right = 368.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink134" parent="." instance=ExtResource( 3 )]
+margin_left = 368.0
+margin_top = 64.0
+margin_right = 384.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink135" parent="." instance=ExtResource( 3 )]
+margin_left = 384.0
+margin_top = 64.0
+margin_right = 400.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink136" parent="." instance=ExtResource( 3 )]
+margin_left = 400.0
+margin_top = 64.0
+margin_right = 416.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink137" parent="." instance=ExtResource( 3 )]
+margin_left = 352.0
+margin_top = 80.0
+margin_right = 368.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink138" parent="." instance=ExtResource( 3 )]
+margin_left = 368.0
+margin_top = 80.0
+margin_right = 384.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink149" parent="." instance=ExtResource( 3 )]
+margin_left = 320.0
+margin_top = 96.0
+margin_right = 336.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink150" parent="." instance=ExtResource( 3 )]
+margin_left = 336.0
+margin_top = 96.0
+margin_right = 352.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink151" parent="." instance=ExtResource( 3 )]
+margin_left = 320.0
+margin_top = 80.0
+margin_right = 336.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink152" parent="." instance=ExtResource( 3 )]
+margin_left = 336.0
+margin_top = 80.0
+margin_right = 352.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink153" parent="." instance=ExtResource( 3 )]
+margin_left = 320.0
+margin_top = 64.0
+margin_right = 336.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink154" parent="." instance=ExtResource( 3 )]
+margin_left = 336.0
+margin_top = 64.0
+margin_right = 352.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink155" parent="." instance=ExtResource( 3 )]
+margin_left = 320.0
+margin_top = 48.0
+margin_right = 336.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink156" parent="." instance=ExtResource( 3 )]
+margin_left = 336.0
+margin_top = 48.0
+margin_right = 352.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink157" parent="." instance=ExtResource( 3 )]
+margin_left = 320.0
+margin_top = 32.0
+margin_right = 336.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink158" parent="." instance=ExtResource( 3 )]
+margin_left = 336.0
+margin_top = 32.0
+margin_right = 352.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink139" parent="." instance=ExtResource( 3 )]
+margin_left = 384.0
+margin_top = 80.0
+margin_right = 400.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink140" parent="." instance=ExtResource( 3 )]
+margin_left = 400.0
+margin_top = 80.0
+margin_right = 416.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink141" parent="." instance=ExtResource( 3 )]
+margin_left = 352.0
+margin_top = 96.0
+margin_right = 368.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink142" parent="." instance=ExtResource( 3 )]
+margin_left = 368.0
+margin_top = 96.0
+margin_right = 384.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink143" parent="." instance=ExtResource( 3 )]
+margin_left = 384.0
+margin_top = 96.0
+margin_right = 400.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink144" parent="." instance=ExtResource( 3 )]
+margin_left = 400.0
+margin_top = 96.0
+margin_right = 416.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink145" parent="." instance=ExtResource( 3 )]
+margin_left = 352.0
+margin_top = 112.0
+margin_right = 368.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink146" parent="." instance=ExtResource( 3 )]
+margin_left = 368.0
+margin_top = 112.0
+margin_right = 384.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink147" parent="." instance=ExtResource( 3 )]
+margin_left = 384.0
+margin_top = 112.0
+margin_right = 400.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink159" parent="." instance=ExtResource( 3 )]
+margin_left = 368.0
+margin_top = 128.0
+margin_right = 384.0
+margin_bottom = 144.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink160" parent="." instance=ExtResource( 3 )]
+margin_left = 384.0
+margin_top = 128.0
+margin_right = 400.0
+margin_bottom = 144.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink148" parent="." instance=ExtResource( 3 )]
+margin_left = 400.0
+margin_top = 112.0
+margin_right = 416.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink161" parent="." instance=ExtResource( 3 )]
+margin_left = 352.0
+margin_top = 160.0
+margin_right = 368.0
+margin_bottom = 176.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink162" parent="." instance=ExtResource( 3 )]
+margin_left = 368.0
+margin_top = 160.0
+margin_right = 384.0
+margin_bottom = 176.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink163" parent="." instance=ExtResource( 3 )]
+margin_left = 384.0
+margin_top = 160.0
+margin_right = 400.0
+margin_bottom = 176.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink164" parent="." instance=ExtResource( 3 )]
+margin_left = 400.0
+margin_top = 160.0
+margin_right = 416.0
+margin_bottom = 176.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink165" parent="." instance=ExtResource( 3 )]
+margin_left = 352.0
+margin_top = 144.0
+margin_right = 368.0
+margin_bottom = 160.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink166" parent="." instance=ExtResource( 3 )]
+margin_left = 368.0
+margin_top = 144.0
+margin_right = 384.0
+margin_bottom = 160.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink167" parent="." instance=ExtResource( 3 )]
+margin_left = 384.0
+margin_top = 144.0
+margin_right = 400.0
+margin_bottom = 160.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink168" parent="." instance=ExtResource( 3 )]
+margin_left = 400.0
+margin_top = 144.0
+margin_right = 416.0
+margin_bottom = 160.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink82" parent="." instance=ExtResource( 3 )]
+margin_left = 224.0
+margin_top = 32.0
+margin_right = 240.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink83" parent="." instance=ExtResource( 3 )]
+margin_left = 208.0
+margin_top = 32.0
+margin_right = 224.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink84" parent="." instance=ExtResource( 3 )]
+margin_left = 240.0
+margin_top = 32.0
+margin_right = 256.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink85" parent="." instance=ExtResource( 3 )]
+margin_left = 256.0
+margin_top = 32.0
+margin_right = 272.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink86" parent="." instance=ExtResource( 3 )]
+margin_left = 272.0
+margin_top = 32.0
+margin_right = 288.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink87" parent="." instance=ExtResource( 3 )]
+margin_left = 288.0
+margin_top = 32.0
+margin_right = 304.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink88" parent="." instance=ExtResource( 3 )]
+margin_left = 304.0
+margin_top = 32.0
+margin_right = 320.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink89" parent="." instance=ExtResource( 3 )]
+margin_left = 224.0
+margin_top = 96.0
+margin_right = 240.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink90" parent="." instance=ExtResource( 3 )]
+margin_left = 208.0
+margin_top = 96.0
+margin_right = 224.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink91" parent="." instance=ExtResource( 3 )]
+margin_left = 240.0
+margin_top = 96.0
+margin_right = 256.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink92" parent="." instance=ExtResource( 3 )]
+margin_left = 256.0
+margin_top = 96.0
+margin_right = 272.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink93" parent="." instance=ExtResource( 3 )]
+margin_left = 272.0
+margin_top = 96.0
+margin_right = 288.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink94" parent="." instance=ExtResource( 3 )]
+margin_left = 288.0
+margin_top = 96.0
+margin_right = 304.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink95" parent="." instance=ExtResource( 3 )]
+margin_left = 304.0
+margin_top = 96.0
+margin_right = 320.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink103" parent="." instance=ExtResource( 3 )]
+margin_left = 224.0
+margin_top = 80.0
+margin_right = 240.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink104" parent="." instance=ExtResource( 3 )]
+margin_left = 208.0
+margin_top = 80.0
+margin_right = 224.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink105" parent="." instance=ExtResource( 3 )]
+margin_left = 240.0
+margin_top = 80.0
+margin_right = 256.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink106" parent="." instance=ExtResource( 3 )]
+margin_left = 272.0
+margin_top = 80.0
+margin_right = 288.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink107" parent="." instance=ExtResource( 3 )]
+margin_left = 288.0
+margin_top = 80.0
+margin_right = 304.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink108" parent="." instance=ExtResource( 3 )]
+margin_left = 304.0
+margin_top = 80.0
+margin_right = 320.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink109" parent="." instance=ExtResource( 3 )]
+margin_left = 224.0
+margin_top = 64.0
+margin_right = 240.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink110" parent="." instance=ExtResource( 3 )]
+margin_left = 208.0
+margin_top = 64.0
+margin_right = 224.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink111" parent="." instance=ExtResource( 3 )]
+margin_left = 240.0
+margin_top = 64.0
+margin_right = 256.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink112" parent="." instance=ExtResource( 3 )]
+margin_left = 272.0
+margin_top = 64.0
+margin_right = 288.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink113" parent="." instance=ExtResource( 3 )]
+margin_left = 288.0
+margin_top = 64.0
+margin_right = 304.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink114" parent="." instance=ExtResource( 3 )]
+margin_left = 304.0
+margin_top = 64.0
+margin_right = 320.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink115" parent="." instance=ExtResource( 3 )]
+margin_left = 224.0
+margin_top = 48.0
+margin_right = 240.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink116" parent="." instance=ExtResource( 3 )]
+margin_left = 208.0
+margin_top = 48.0
+margin_right = 224.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink117" parent="." instance=ExtResource( 3 )]
+margin_left = 240.0
+margin_top = 48.0
+margin_right = 256.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink118" parent="." instance=ExtResource( 3 )]
+margin_left = 272.0
+margin_top = 48.0
+margin_right = 288.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink119" parent="." instance=ExtResource( 3 )]
+margin_left = 288.0
+margin_top = 48.0
+margin_right = 304.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink120" parent="." instance=ExtResource( 3 )]
+margin_left = 304.0
+margin_top = 48.0
+margin_right = 320.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink96" parent="." instance=ExtResource( 3 )]
+margin_left = 224.0
+margin_top = 112.0
+margin_right = 240.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink97" parent="." instance=ExtResource( 3 )]
+margin_left = 208.0
+margin_top = 112.0
+margin_right = 224.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink98" parent="." instance=ExtResource( 3 )]
+margin_left = 240.0
+margin_top = 112.0
+margin_right = 256.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink99" parent="." instance=ExtResource( 3 )]
+margin_left = 256.0
+margin_top = 112.0
+margin_right = 272.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink100" parent="." instance=ExtResource( 3 )]
+margin_left = 272.0
+margin_top = 112.0
+margin_right = 288.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink101" parent="." instance=ExtResource( 3 )]
+margin_left = 288.0
+margin_top = 112.0
+margin_right = 304.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink102" parent="." instance=ExtResource( 3 )]
+margin_left = 304.0
+margin_top = 112.0
+margin_right = 320.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink23" parent="." instance=ExtResource( 3 )]
+margin_left = 192.0
+margin_top = 48.0
+margin_right = 208.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink24" parent="." instance=ExtResource( 3 )]
+margin_left = 176.0
+margin_top = 48.0
+margin_right = 192.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink25" parent="." instance=ExtResource( 3 )]
+margin_left = 160.0
+margin_top = 48.0
+margin_right = 176.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink26" parent="." instance=ExtResource( 3 )]
+margin_left = 144.0
+margin_top = 48.0
+margin_right = 160.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink27" parent="." instance=ExtResource( 3 )]
+margin_left = 128.0
+margin_top = 48.0
+margin_right = 144.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink28" parent="." instance=ExtResource( 3 )]
+margin_left = 112.0
+margin_top = 48.0
+margin_right = 128.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink29" parent="." instance=ExtResource( 3 )]
+margin_left = 96.0
+margin_top = 48.0
+margin_right = 112.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink30" parent="." instance=ExtResource( 3 )]
+margin_left = 80.0
+margin_top = 48.0
+margin_right = 96.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink31" parent="." instance=ExtResource( 3 )]
+margin_left = 32.0
+margin_top = 48.0
+margin_right = 48.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink32" parent="." instance=ExtResource( 3 )]
+margin_left = 16.0
+margin_top = 48.0
+margin_right = 32.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink2" parent="." instance=ExtResource( 3 )]
+margin_left = 32.0
+margin_top = 16.0
+margin_right = 48.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink3" parent="." instance=ExtResource( 3 )]
+margin_left = 48.0
+margin_top = 16.0
+margin_right = 64.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink4" parent="." instance=ExtResource( 3 )]
+margin_left = 64.0
+margin_top = 16.0
+margin_right = 80.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink5" parent="." instance=ExtResource( 3 )]
+margin_left = 80.0
+margin_top = 16.0
+margin_right = 96.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink6" parent="." instance=ExtResource( 3 )]
+margin_left = 96.0
+margin_top = 16.0
+margin_right = 112.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink7" parent="." instance=ExtResource( 3 )]
+margin_left = 112.0
+margin_top = 16.0
+margin_right = 128.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink8" parent="." instance=ExtResource( 3 )]
+margin_left = 144.0
+margin_top = 16.0
+margin_right = 160.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink9" parent="." instance=ExtResource( 3 )]
+margin_left = 128.0
+margin_top = 16.0
+margin_right = 144.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink10" parent="." instance=ExtResource( 3 )]
+margin_left = 160.0
+margin_top = 16.0
+margin_right = 176.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink33" parent="." instance=ExtResource( 3 )]
+margin_left = 16.0
+margin_top = 64.0
+margin_right = 32.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink34" parent="." instance=ExtResource( 3 )]
+margin_left = 16.0
+margin_top = 80.0
+margin_right = 32.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink35" parent="." instance=ExtResource( 3 )]
+margin_left = 32.0
+margin_top = 80.0
+margin_right = 48.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink36" parent="." instance=ExtResource( 3 )]
+margin_left = 192.0
+margin_top = 64.0
+margin_right = 208.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink37" parent="." instance=ExtResource( 3 )]
+margin_left = 176.0
+margin_top = 64.0
+margin_right = 192.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink38" parent="." instance=ExtResource( 3 )]
+margin_left = 80.0
+margin_top = 80.0
+margin_right = 96.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink39" parent="." instance=ExtResource( 3 )]
+margin_left = 96.0
+margin_top = 80.0
+margin_right = 112.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink40" parent="." instance=ExtResource( 3 )]
+margin_left = 112.0
+margin_top = 80.0
+margin_right = 128.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink41" parent="." instance=ExtResource( 3 )]
+margin_left = 128.0
+margin_top = 80.0
+margin_right = 144.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink42" parent="." instance=ExtResource( 3 )]
+margin_left = 144.0
+margin_top = 80.0
+margin_right = 160.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink43" parent="." instance=ExtResource( 3 )]
+margin_left = 160.0
+margin_top = 80.0
+margin_right = 176.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink44" parent="." instance=ExtResource( 3 )]
+margin_left = 176.0
+margin_top = 80.0
+margin_right = 192.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink45" parent="." instance=ExtResource( 3 )]
+margin_left = 192.0
+margin_top = 80.0
+margin_right = 208.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink46" parent="." instance=ExtResource( 3 )]
+margin_left = 192.0
+margin_top = 96.0
+margin_right = 208.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink47" parent="." instance=ExtResource( 3 )]
+margin_left = 176.0
+margin_top = 96.0
+margin_right = 192.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink48" parent="." instance=ExtResource( 3 )]
+margin_left = 160.0
+margin_top = 96.0
+margin_right = 176.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink49" parent="." instance=ExtResource( 3 )]
+margin_left = 144.0
+margin_top = 96.0
+margin_right = 160.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink50" parent="." instance=ExtResource( 3 )]
+margin_left = 128.0
+margin_top = 96.0
+margin_right = 144.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink51" parent="." instance=ExtResource( 3 )]
+margin_left = 112.0
+margin_top = 96.0
+margin_right = 128.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink52" parent="." instance=ExtResource( 3 )]
+margin_left = 96.0
+margin_top = 96.0
+margin_right = 112.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink53" parent="." instance=ExtResource( 3 )]
+margin_left = 80.0
+margin_top = 96.0
+margin_right = 96.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink54" parent="." instance=ExtResource( 3 )]
+margin_left = 32.0
+margin_top = 96.0
+margin_right = 48.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink55" parent="." instance=ExtResource( 3 )]
+margin_left = 16.0
+margin_top = 96.0
+margin_right = 32.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink56" parent="." instance=ExtResource( 3 )]
+margin_left = 32.0
+margin_top = 64.0
+margin_right = 48.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink57" parent="." instance=ExtResource( 3 )]
+margin_left = 48.0
+margin_top = 96.0
+margin_right = 64.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink58" parent="." instance=ExtResource( 3 )]
+margin_left = 64.0
+margin_top = 96.0
+margin_right = 80.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink65" parent="." instance=ExtResource( 3 )]
+margin_left = 160.0
+margin_top = 112.0
+margin_right = 176.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink66" parent="." instance=ExtResource( 3 )]
+margin_left = 144.0
+margin_top = 112.0
+margin_right = 160.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink67" parent="." instance=ExtResource( 3 )]
+margin_left = 128.0
+margin_top = 112.0
+margin_right = 144.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink68" parent="." instance=ExtResource( 3 )]
+margin_left = 112.0
+margin_top = 112.0
+margin_right = 128.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink69" parent="." instance=ExtResource( 3 )]
+margin_left = 96.0
+margin_top = 112.0
+margin_right = 112.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink70" parent="." instance=ExtResource( 3 )]
+margin_left = 80.0
+margin_top = 112.0
+margin_right = 96.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink71" parent="." instance=ExtResource( 3 )]
+margin_left = 64.0
+margin_top = 112.0
+margin_right = 80.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink72" parent="." instance=ExtResource( 3 )]
+margin_left = 48.0
+margin_top = 112.0
+margin_right = 64.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink73" parent="." instance=ExtResource( 3 )]
+margin_left = 16.0
+margin_top = 112.0
+margin_right = 32.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink74" parent="." instance=ExtResource( 3 )]
+margin_left = 32.0
+margin_top = 112.0
+margin_right = 48.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink59" parent="." instance=ExtResource( 3 )]
+margin_left = 80.0
+margin_top = 64.0
+margin_right = 96.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink60" parent="." instance=ExtResource( 3 )]
+margin_left = 96.0
+margin_top = 64.0
+margin_right = 112.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink61" parent="." instance=ExtResource( 3 )]
+margin_left = 112.0
+margin_top = 64.0
+margin_right = 128.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink62" parent="." instance=ExtResource( 3 )]
+margin_left = 144.0
+margin_top = 64.0
+margin_right = 160.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink63" parent="." instance=ExtResource( 3 )]
+margin_left = 128.0
+margin_top = 64.0
+margin_right = 144.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )
+
+[node name="ink64" parent="." instance=ExtResource( 3 )]
+margin_left = 160.0
+margin_top = 64.0
+margin_right = 176.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 8, 8 )

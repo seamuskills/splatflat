@@ -32,3 +32,5 @@ func _physics_process(delta):
 		var proj = projectile.instance()
 		proj.global_position = body.global_position
 		get_parent().add_child(proj)
+		var projColor = get_node(str(proj.get_path())+"/body/projectile")
+		projColor.color = get_node(str(body.get_path())+"/ColorRect").color
